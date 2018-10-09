@@ -1,0 +1,60 @@
+<?xml version='1.0'?>
+<sdf version='1.4'>
+	<model name="tree">
+	  <static>true</static>
+		<link name="tree_link">
+			<visual name="terrain">
+				<geometry>
+					<mesh>
+					  <uri>model://imav_2018_terrain/imav2018_terrain_v2.dae</uri>
+					</mesh>
+				</geometry>
+				<material>
+				  <script>
+				    <uri>model://imav_2018_terrain/imav2018_terrain_v2.material</uri>
+				    <name>Material</name>
+				  </script>
+				</material>
+			</visual>
+			<visual name="trees">
+				<geometry>
+					<mesh>
+					  <uri>model://imav_2018_terrain/trees.dae</uri>
+					</mesh>
+				</geometry>
+				<material>
+				  <script>
+				    <uri>model://imav_2018_terrain/tree.material</uri>
+				    <name>treeMat</name>
+				  </script>
+				</material>
+			</visual>
+			<visual name="shrubs">
+			  <geometry>
+					<mesh>
+					  <uri>model://imav_2018_terrain/shrubs.dae</uri>
+					</mesh>
+				</geometry>
+				<material>
+				  <script>
+				    <uri>model://imav_2018_terrain/shrub.material</uri>
+				    <name>shrubMat</name>
+				  </script>
+				</material>
+			</visual>
+			<visual name="grass">
+			  <geometry>
+					<mesh>
+					  <uri>model://imav_2018_terrain/grass.dae</uri>
+					</mesh>
+				</geometry>
+				<material>
+				  <script>
+				    <uri>model://imav_2018_terrain/grass.material</uri>
+				    <name>grassMat</name>
+				  </script>
+				</material>
+			</visual>
+		</link>
+	</model>
+</sdf>

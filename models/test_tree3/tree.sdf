@@ -1,0 +1,21 @@
+<?xml version='1.0'?>
+<sdf version='1.4'>
+	<model name="tree">
+	  <static>true</static>
+		<link name="tree_link">
+			<visual name="leaves">
+				<geometry>
+					<mesh>
+					  <uri>model://test_tree3/eucalyptus_v2.dae</uri>
+					</mesh>
+				</geometry>
+				<material>
+				  <script>
+				    <uri>model://test_tree3/eucalyptus_v2.material</uri>
+				    <name>eucalyptus_v2_mat</name>
+				  </script>
+				</material>
+			</visual>
+		</link>
+	</model>
+</sdf>

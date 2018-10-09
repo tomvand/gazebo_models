@@ -1,0 +1,28 @@
+<?xml version='1.0'?>
+<sdf version='1.4'>
+	<model name="tree">
+	  <static>true</static>
+		<link name="tree_link">
+			<visual name="leaves">
+				<geometry>
+					<mesh>
+					  <uri>model://test_tree2/leaves.dae</uri>
+					</mesh>
+				</geometry>
+				<material>
+				  <script>
+				    <uri>model://test_tree2/leaves.material</uri>
+				    <name>Material_001-material</name>
+				  </script>
+				</material>
+			</visual>
+			<visual name="trunk">
+			  <geometry>
+			    <mesh>
+			      <uri>model://test_tree2/trunk.dae</uri>
+			    </mesh>
+		    </geometry>
+			</visual>
+		</link>
+	</model>
+</sdf>

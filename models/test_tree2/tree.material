@@ -1,0 +1,15 @@
+material Material_001-material
+{
+	technique
+	{
+		pass
+		{
+			alpha_rejection greater 128
+			
+			texture_unit
+			{
+				texture treebranch.png
+			}
+		}
+	}
+}

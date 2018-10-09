@@ -1,0 +1,65 @@
+material Material
+{
+	technique
+	{
+	  // Lighting pass
+	  pass
+	  {
+	    ambient 1 1 1
+	    diffuse 1 1 1
+	  }
+	  
+	  // Diffuse pass
+		pass
+		{
+		  lighting off
+		  scene_blend modulate
+		  // Orthophoto
+			texture_unit
+			{
+				texture area_1758x1758m.png
+				filtering anisotropic
+			  max_anisotropy 8
+			}
+			// Grass detail
+			texture_unit
+			{
+			  texture grass_detail.png
+			  scale 0.002 0.002
+			  filtering anisotropic
+			  max_anisotropy 8
+			  colour_op_ex modulate_x2 src_current src_texture
+			}
+			// Forest floor
+			texture_unit
+			{
+			  texture forest_floor_mask.png
+			  alpha_op_ex source2 src_current src_texture
+			  colour_op_ex source1 src_current src_texture
+			}
+			texture_unit
+			{
+			  texture forest_floor.png
+			  scale 0.01 0.01
+			  filtering anisotropic
+			  max_anisotropy 8
+			  colour_op_ex blend_current_alpha src_texture src_current
+			}
+			// Riverbank
+			texture_unit
+			{
+			  texture riverbank_mask.png
+			  alpha_op_ex source2 src_current src_texture
+			  colour_op_ex source1 src_current src_texture
+			}
+			texture_unit
+			{
+			  texture riverbank.png
+			  scale 0.01 0.01
+			  filtering anisotropic
+			  max_anisotropy 8
+			  colour_op_ex blend_current_alpha src_texture src_current
+			}
+		}
+	}
+}

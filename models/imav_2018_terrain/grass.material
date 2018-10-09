@@ -1,0 +1,21 @@
+material grassMat
+{
+	technique
+	{
+		pass
+		{
+		  alpha_to_coverage on
+			alpha_rejection greater 128
+			
+			diffuse 0 0 0
+			ambient 1 1 1
+			
+			texture_unit
+			{
+				texture grass_tex.png
+				filtering anisotropic
+			  max_anisotropy 8
+			}
+		}
+	}
+}
